@@ -7,5 +7,10 @@ namespace aula_oo_01
 {
     class Mesa
     {
+        public float largura;
+        public float altura;
+        public float profundidade;
+
+        public string cor;
     }
 }
