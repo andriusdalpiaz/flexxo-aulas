@@ -21,5 +21,10 @@ namespace aula_oo_01
         {
             Console.WriteLine("Monitor está desligando");
         }
+
+        public int Movimentar(int a, int b) 
+        {
+            return (a - b);
+        }
     }
 }
