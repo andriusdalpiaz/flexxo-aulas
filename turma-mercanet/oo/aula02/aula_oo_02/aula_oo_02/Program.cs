@@ -45,14 +45,13 @@ namespace aula_oo_02
 
             biblioteca.livros[0] = livro01;
 
+            biblioteca.Contratar(funcionario);
+            biblioteca.Contratar(zelador);
+
             Livro locado = biblioteca.Locar(cliente, 0);
 
             cliente.Ler(locado);
 
-            biblioteca.Contratar(funcionario);
-            biblioteca.Contratar(zelador);
-
-            funcionario.FazerLocacao(locado, cliente);
 
             Console.ReadKey();
         }

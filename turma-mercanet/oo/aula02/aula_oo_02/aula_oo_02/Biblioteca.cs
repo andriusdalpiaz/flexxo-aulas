@@ -35,13 +35,14 @@ namespace aula_oo_02
 
         public Livro Locar(Pessoa cliente, int numeroDoLivro) 
         {
-            Console.WriteLine(cliente.nome + " está locando: " + livros[numeroDoLivro].nome);
+            Recepcionista funcionario = (Recepcionista)funcionarios[0];
+            funcionario.FazerLocacao(livros[numeroDoLivro], cliente);
             return livros[numeroDoLivro];
         }
 
         public void Demitir(Pessoa funcionario) 
         {
-        
+            
         }
     }
 }
