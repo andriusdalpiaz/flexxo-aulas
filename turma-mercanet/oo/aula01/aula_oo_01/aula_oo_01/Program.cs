@@ -69,7 +69,7 @@ namespace aula_oo_01
             amigo.dataDeNascimento = new DateTime(1995, 2, 1);
 
             eu.Cumprimentar(amigo);
-
+            
             Cachorro dog = new Cachorro();
 
             dog.nome = "Ruanito";
