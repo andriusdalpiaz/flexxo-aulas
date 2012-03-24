@@ -11,7 +11,8 @@ namespace aula_oo_02
 
         public void FazerLocacao(Livro livro, Pessoa cliente) 
         {
-        
+            Console.WriteLine(nome + " está locando o livro " 
+                               + livro.nome + " para " + cliente.nome); 
         }
     }
 }

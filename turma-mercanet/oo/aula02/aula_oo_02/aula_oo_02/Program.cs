@@ -52,6 +52,8 @@ namespace aula_oo_02
             biblioteca.Contratar(funcionario);
             biblioteca.Contratar(zelador);
 
+            funcionario.FazerLocacao(locado, cliente);
+
             Console.ReadKey();
         }
     }
