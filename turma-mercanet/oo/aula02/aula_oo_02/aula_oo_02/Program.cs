@@ -52,6 +52,8 @@ namespace aula_oo_02
 
             cliente.Ler(locado);
 
+            Console.WriteLine("Informe seu nome");
+            string result = Console.ReadLine();
 
             Console.ReadKey();
         }
