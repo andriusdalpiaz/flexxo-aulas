@@ -9,12 +9,13 @@ namespace aula_oo_031
     {
         static void Main(string[] args)
         {
-            CadastroCurso cadastro;
-            cadastro = new CadastroCurso();
-            cadastro.Registrar();
-            cadastro.Exibir();
-            
+            //CadastroCurso cadastro;
+            //cadastro = new CadastroCurso();
+            //cadastro.Registrar();
+            //cadastro.Exibir();
+            Util.InvertPalavra("marcos");
             Console.ReadKey();
+
         }
     }
 }

@@ -9,7 +9,10 @@ namespace aula_oo_031
     {
         public static void InvertPalavra(string palavra) 
         {
-            
+            for (int i = palavra.Length - 1; i >= 0; i--)
+            {
+                Console.Write(palavra[i]);
+            }
         }
     }
 }
