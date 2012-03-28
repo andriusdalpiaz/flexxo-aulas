@@ -39,5 +39,13 @@ namespace aula_00_41
                 }
             }
         }
+
+        public void ExibirItens() 
+        {
+            for (int i = 0; i < espacos.Length; i++)
+            {
+                Console.WriteLine(espacos[i].GetType().Name);
+            }
+        }
     }
 }
