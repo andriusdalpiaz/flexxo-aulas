@@ -7,5 +7,6 @@ char nome[100];
 int main(){
     gets(nome);
     printf("Ola, %s", nome);
+    
     getch();
 }
