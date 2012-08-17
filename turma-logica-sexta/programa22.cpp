@@ -1,12 +1,14 @@
-#include <stdio.h>
+#include <iostream>
 #include <conio.h>
 #include <string.h>
+
+using namespace std;
 
 char codigo[10];
 
 int main(){
-    printf("Informe o codigo do produto");
-    gets(codigo);
+    cout << "Informe o codigo do produto";
+    cin >> codigo;
     
     if(strcmp(codigo, "123ABC") == 0){
        printf("Valor do produto: 100");
