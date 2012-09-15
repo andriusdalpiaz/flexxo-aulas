@@ -1,4 +1,5 @@
 using System;
+
 namespace Programa01
 {
 	class MainClass
@@ -6,21 +7,36 @@ namespace Programa01
 		public static void Main (string[] args)
 		{
 			Pessoa soldado;
-			soldado = new Pessoa();
+			soldado = new Pessoa ();
 			soldado.pontosDeVida = 200;
 			soldado.nome = "João";
 			soldado.sobrenome = "Pé de Feijão";
 
 			Pessoa nazista;
-			nazista = new Pessoa();
+			nazista = new Pessoa ();
 			nazista.pontosDeVida = 200;
 			nazista.nome = "Adolfo";
 			nazista.sobrenome = "Hitinho";
 
-			int valorDoAtaque = soldado.Ataca();
-			nazista.RecebeuAtaque(valorDoAtaque);
+			while (true) {
+				int valorDoAtaque = soldado.Ataca ();
+				nazista.RecebeuAtaque (valorDoAtaque);
 
-			Console.ReadKey();
+				valorDoAtaque = nazista.Ataca ();
+				soldado.RecebeuAtaque (valorDoAtaque);
+
+				if (nazista.pontosDeVida <= 0) {
+					nazista.Morrer ();
+					break;
+				}
+
+				if (soldado.pontosDeVida <= 0) {
+					soldado.Morrer ();
+					break;
+				}
+			}
+
+			Console.ReadKey ();
 		}
 	}
 
@@ -30,18 +46,33 @@ namespace Programa01
 		public string sobrenome;
 		public int pontosDeVida;
 
+		public void Morrer ()
+		{
+			Console.WriteLine ("A pessoa " + nome + " " + sobrenome + " morreu");
+		}
+
 		public int Ataca ()
 		{
-			Random r = new Random();
-			Console.WriteLine("A pessoa " + nome + " " + sobrenome + " atacou");
-			return r.Next(0, 100);
+			Random r = new Random ();
+			System.Threading.Thread.Sleep (1000);
+			if (pontosDeVida > 0) {
+				Console.WriteLine ("A pessoa " + nome + " " + sobrenome + " atacou");
+				return r.Next (0, 100);
+			}
+			return 0;
 		}
 
 		public void RecebeuAtaque (int valorDoAtaque)
 		{
-			Console.WriteLine("A pessoa " + nome + " " + sobrenome + " recebeu dano de " + valorDoAtaque);
-			pontosDeVida -= valorDoAtaque;
-			Console.WriteLine("A pessoa " + nome + " " + sobrenome + " tem " + pontosDeVida + " pontos de vida" );
+			if (valorDoAtaque > 0) {
+			
+				Console.WriteLine ("A pessoa " + nome + " " + sobrenome + " recebeu dano de " + valorDoAtaque);
+				pontosDeVida -= valorDoAtaque;
+				if (pontosDeVida < 0) {
+					pontosDeVida = 0;
+				}
+				Console.WriteLine ("A pessoa " + nome + " " + sobrenome + " tem " + pontosDeVida + " pontos de vida");
+			}
 		}
 	}
 }
