@@ -50,7 +50,8 @@ int main()
 		cout << "Deseja continuar (s/n)";
 
 		cin >> continuar;
-	}	
+	}
+	cin.get();	
 }
 
 
