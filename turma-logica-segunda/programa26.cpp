@@ -6,8 +6,6 @@ float saque;
 int notas100 = 0, notas50 = 0, notas20 = 0, notas10 = 0, notas5 = 0, notas1 = 0;
 int continuar;
 
-
-
 int main()
 {
 
@@ -16,8 +14,8 @@ int main()
 
 		cout << "Informe quanto deseja sacar";
 		cin >> saque;
-		
-		while(saque >= 0){
+
+		while(saque > 0){
 			if(saque > 100){
 				saque -= 100;
 				notas100++;
