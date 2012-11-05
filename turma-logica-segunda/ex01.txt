@@ -1,0 +1,29 @@
+Escreva um programa para mostrar a media  de 10 alunos, apos mostrar o resultado.
+
+Se a media do aluno é acima de 6 está aprovado.
+Se a media do aluno é igual 5 está recuperacao.
+Se a media do aluno é menor que 4 esta reprovado
+
+
+Ler: 
+	Nome 
+	Ano de Nascimento
+	Nota Prova 1
+	Nota Prova 2
+	Nota Prova 3
+
+Exibir:
+	Nome: Marcos
+	Ano de Nascimento: 1989
+	Nota Prova 1: 8
+	Nota Prova 2: 8
+	Nota Prova 3: 8
+	Aprovado?: Sim
+	=============================
+	Nome: Joao
+	Ano de Nascimento: 1988
+	Nota Prova 1: 5
+	Nota Prova 2: 5
+	Nota Prova 3: 5
+	Aprovado?: Não
+	=============================
